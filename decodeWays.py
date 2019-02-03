@@ -22,11 +22,11 @@ class Solution:
             tail = s[2:]
 
         print(head + "," + tail)
-        if int(head) < 26:
+        if int(head) <= 26:
             # self.encodeMapping[int(head[0:1])] + self.numDecodings(int(head[1:0])+ tail)
             return self.encodeMapping[int(head)] + self.numDecodings(tail)
         else:
-            return self.encodeMapping[int(head[0])] + self.encodeMapping[int(head[1])] + self.numDecodings(tail)
+            return self.encodeMapping[int(head[0])] + self.numDecodings(head[1:]+tail)
     
 
 sln = Solution()
