@@ -23,13 +23,48 @@ class Solution:
 
         print(head + "," + tail)
         if int(head) <= 26:
+            _s = ""
+
             # self.encodeMapping[int(head[0:1])] + self.numDecodings(int(head[1:0])+ tail)
-            return self.encodeMapping[int(head)] + self.numDecodings(tail)
+            if head[1:] != '':
+                comb1 = self.numDecodings(head[1:] + tail)
+                comb1.split(",")
+                print("comb1: " + str(comb1))
+                for c in range(0, len(comb1)):
+                    if c == len(comb1) - 1:
+                        _s = self.encodeMapping[int(head[0:1])] + comb1[c]
+                    else:
+                        _s = self.encodeMapping[int(head[0:1])] + comb1[c] + ","
+            # comb1 + head[0:1]
+            comb2 = self.numDecodings(tail)
+            comb2.split(",")
+            print("comb2: " + str(comb2))
+
+            _sx = ""
+            for cx in range(0, len(comb2)):
+                if cx == len(comb2) - 1:
+                    _sx = self.encodeMapping[int(head)] + comb2[cx]
+                else:
+                    _sx = self.encodeMapping[int(head)] + comb2[cx] + ","
+            # comb2 + head
+            return _s + _sx
+            # return self.encodeMapping[int(head)] + self.numDecodings(tail)
         else:
-            return self.encodeMapping[int(head[0])] + self.numDecodings(head[1:]+tail)
+            comb = self.numDecodings(head[1:]+tail)
+            comb.split(",")
+            print("comb: " + str(comb))
+
+            _sxt = ""
+            for cxt in range(0, len(comb)):
+                if cxt == len(comb) - 1:
+                    _sxt = self.encodeMapping[int(head[0])] + comb[cxt]
+                else:
+                    _sxt = self.encodeMapping[int(head[0])] + comb[cxt] + ","
+            return _sxt
+            # return self.encodeMapping[int(head[0])] + self.numDecodings(head[1:]+tail)
     
 
 sln = Solution()
-print(sln.encodeMapping)
+# print(sln.encodeMapping)
 
 print(sln.numDecodings('125261'))
