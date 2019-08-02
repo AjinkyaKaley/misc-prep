@@ -13,4 +13,4 @@ class Solution:
             return self.findMin(nums,mid+1, high)
 
 sln = Solution()
-print(sln.findMin([3,4,5,1,2], 0, 4))
+# print(sln.findMin([3,4,5,1,2]))

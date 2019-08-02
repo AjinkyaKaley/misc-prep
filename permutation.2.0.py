@@ -14,21 +14,22 @@ class Solution:
     def dfs(self, answer, nums, iterationResult):
         
         if len(nums) == 0:
-            answer.append(copy.deepcopy(iterationResult))
+            # answer.append(copy.deepcopy(iterationResult))
+            print(''.join(map(str, iterationResult)))
             return
 
-        visited = set()
+        # visited = set()
         for i in range(0,len(nums)):
-            if nums[i] in visited:
-                continue
+            # if nums[i] in visited:
+            #     continue
 
             root = nums[i]
-            visited.add(root)
+            # visited.add(root)
             newNums = nums[:i] + nums[i+1:]
             iterationResult.append(root)                
             self.dfs(answer,newNums,iterationResult)
             iterationResult.pop()
-        return answer
+        # return answer
 
 sln = Solution()
-print(sln.permute([1,1,2,2]))
+sln.permute([1,2,3,4])

@@ -34,4 +34,5 @@ class Solution:
 
 
 sln = Solution()
-print(sln.lengthOfLongestSubstring("au"))
+# print(sln.lengthOfLongestSubstring("pwwkepw"))
+print(sln.lengthOfLongestSubstring("jbpnbwwd"))

@@ -16,8 +16,6 @@ class Solution:
         if n[start] > root or start > len(n):
             return None
         
-        
-        
         for i in range(start,len(n)):
             r = result[n[i]]
             leftVal = self.helper(n, result, r, i+1)

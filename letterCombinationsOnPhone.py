@@ -22,4 +22,4 @@ class Solution:
         return result
 
 sln = Solution()
-print(sln.letterCombinations('9'))
+print(sln.letterCombinations('23'))

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Deque; 
 import java.util.LinkedList; 
 
-public class PrintAllPalindrome 
+public class PrintAllPalindrome
 { 
 	// Driver program 
 	public static void main(String[] args) 

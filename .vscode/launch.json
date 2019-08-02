@@ -4,18 +4,29 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+    {
+        "name": ".NET Core Launch (console)",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${helloworld}/bin/Debug/<target-framework>/<project-name.dll>",
+        "args": [],
+        "cwd": "${helloworld}",
+        "stopAtEntry": false,
+        "console": "internalConsole"
+    },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RegexMatching",
+            "request": "launch",
+            "mainClass": "RegexMatching"
+        },
         {
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch) with Arguments Prompt",
-            "request": "launch",
-            "mainClass": "",
-            "args": "${command:SpecifyProgramArgs}"
         },
         {
             "name": "Python: Current File",
