@@ -12,6 +12,17 @@ class Solution:
         return self.uniquePaths(m-1,n, count) + self.uniquePaths(m, n-1, count)
         # return
 
+    def uniquePaths2(self, m: int, n: int):
+        
+        def getPath(m,n,i,j):
+            if i == m - 1 and j == n - 1:
+                return 1
+            
+            if 0<= i < m and 0 <= j < n:
+                return getPath(m,n,i+1,j) + getPath(m,n,i,j+1)
+            return 0
+        
+        return getPath(m,n,0,0)
     def uniquePathsDP(self, m ,n):
         if m==0 and n==0:
             return 0
@@ -33,4 +44,4 @@ class Solution:
                 
 sln = Solution()
 count=0
-print(sln.uniquePathsDP(3,2))
+print(sln.uniquePaths2(3, 2))

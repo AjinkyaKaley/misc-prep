@@ -2,7 +2,6 @@ import copy;
 class Solution:
 
     def subsets(self, nums, start, subsets, result):
-
         for i in range(start, len(nums)):
             subsets.append(nums[i])
             self.subsets(nums, i+1, subsets,result)
@@ -21,5 +20,5 @@ class Solution:
     #     self.subsets(nums, idx+1, curr)
 
 sln = Solution()
-r = sln.subsets([1,2,3],0,[],[])
+r = sln.subsets([1, 2, 3],0,[],[])
 print(r)

@@ -48,4 +48,4 @@ class Solution:
 
 
 sln = Solution()
-sln.firstMissingPositive([1, 2, 0])
+sln.firstMissingPositive([3, 4, 1, 1, 1, 5, 1, 1, 2, 1])

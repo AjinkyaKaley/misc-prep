@@ -17,4 +17,9 @@ class Solution:
         return -1
 
 sln = Solution()
-sln.findCheapestPrice(3,[[0, 1, 100], [1, 2, 100], [0, 2, 500]],0,2,0)
+print(sln.findCheapestPrice(5,
+                      [[1, 2, 10], [2, 0, 7], [1, 3, 8], [4, 0, 10], [
+                          3, 4, 2], [4, 2, 10], [0, 3, 3], [3, 1, 6], [2, 4, 5]],
+                      0,
+                      4,
+                      1))

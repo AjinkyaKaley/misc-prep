@@ -1,0 +1,227 @@
+1. What is biggest Strength and weakness
+A. Strength
+    - creativity thinking and deliviring a quality product
+    - In first year at factset, i got a chance to work on a rewrite project, the existing project was fragmented in 6 different website, doing similar task of tracking the performance of templates
+    - these website, had a minimalistic UI workflow, which consisted of a grid that had bunch of metrics about template runs, which are essentially used to study the templates and for debugging purpose.
+    - The expectation was to replicate the funcationality in latest technology of angular js and ui-grid, upon looking at the problem, I was able to find the co-releation between these 6 apps and merge
+        them into 1 single cohesive app
+    - Instead of presenting the data in grid format, I decieded to improvise and implement data visualization techniques to create a dashboard app.
+    - This creative approach improved the overall design and workflow of the application, upon the release, I started to see the very positive results. There was high traction of user using this
+        revamped application. The users productivity was improved as they were able to study and debug the problems efficiently
+    - The motivation behind this creative approach was deliviring a quality product. soon this approach became as standard for future developents within my team
+
+    weakness:
+     - I believe my weakness is giving too much focus on doing things the right way, which sometimes has lead me into going down a rabbit hole, chasing the right approach.
+     - This has affected my productivity and timelines of projects, there has been times where I tried to solve the problem in right way, but only to realize that I have spent too much time
+        on this feature, and there are other components to be worked upon. 
+     - For example: recently i was figuring out an authentication problem for one of my projects using microsoft graph api and the task was to check the validation of bearer token
+        so to do this, i was using aps.net core c# and i was following the right way to do is to leverage the inbuilt authentication flow of asp.net core, Instead of writing a custom validation funcation
+        essentially doing the same thing at faster development rate.
+     - over the time, i have learnt how to tackle such situations, I keep track of the progress and estimate the benefit of that approach. I have been practicing that for a while now,
+        and i am now able to identify when i am stressting too much on doing things right way and i take appropriate actions accordingly
+
+
+2. When I call your coworkers for reference checking, what will they say about you?
+A. 
+
+3. What will your team miss if you leave tomorrow?
+A. 
+
+4. Why do you want to work here?
+A. Sure, I would like to say, yelp has very high reputation in tech industry, as per my research, it has constantly mainted high engineering and innovations standards
+and that clearly reflects in the quality of the product. I have been a yelp user for a while now, and i have been fascianated by the
+engineering challenges that yelp has worked on over the years.
+The job description of this position closely aligns with my skills and experience. I currently work on similar paradigm at factset
+where my team owns logging infrastracutre, that tracks the usage of factsets products. and based on this we provide analytical insights.
+with this valuable experience i gained, i belive i am ready for new challenges, and i would like to work on large scale system such as yelp.
+I am intersted in learning and building scalable systems that drives the ad recommendation systems, i am excited to learn about the 
+technologies such as map-reduce and streaming solutions that drives this system.
+I also came across the engineering and cultural values of yelp, and those closely aligns with what i am looking for in my
+new opportunity. I like to be creative while solving problems and coming with newer ideas, working cohesively with the
+team, I find that as a good approach to learn and grow. being tenacious.
+
+5. Conflict resolution?
+    How did you resolve conflicts in your team?
+    Tell me about a time when you had an issue with a coworker
+    How do you handle disagreement with your teammates?
+    Tell me about a situation when you had to work in a group that wasn’t functioning well. What happened?
+
+A1. sure, there was an incident in the past, in one of my projects there was conflict between me and a product developer over a approach
+that i had proposed
+- I was working a solving visual scalability problem, over a dataset that shows the performance of the template. This information is
+very crucial when it comes to debugging and to track the cascading effects on the templates
+- The idea i came up with is to present the volatility in the data as per datetime, and to implement volatility, I decieded to use
+box plot graph
+- everybody agreed on this idea, including the PD. He liked this idea, however, he wanted to make slight change to the box plot, Instead
+of using median, he wanted to use average of the data points
+- The task was to convince him the benifit to using the median instead of mean and average and show him the edge cases when the average
+will fail to convey the volatility in data
+- So to solve this, i tried to understand his point of view, asked the right questions on why he wanted to use average. He was intersted in 
+looking at the trend of the data as well as the volatility, and so he wanted the box plot to constructed out of means as well.
+- after understanding his point of view, i presented a solution that would work for both groups of clients, which are engineering and PDs
+
+A2. sure, there was an incident in the past, in one of my projects there was conflict between me and my manager over a postmortem action items
+- I was a curator for one of the qa cycles, and something went wrong during a release, at the time, me and my manager were
+mitigating the situation, figuring out solution to fix the issue. however, the fixing the issue was taking a while and so we made
+a decision to backout the changes
+- while we were mitigating the situation, our system started to see failures and we had to stop the queues from submitting the jobs
+to our infrastracutre. This caused a downtime of 1:30 mins
+- after the changes were backed out, everything wennt back to normal. following day we had a postmortem on this issue,
+and the new action item were made
+- did not agree to one of the action item
+
+6. Disagree with leadership?
+    or 
+    Give me a specific example of a time when you had to conform to a policy with which you did not agree?
+A1. Sure, i can talk to you about such decision.
+    starting of with details, our web app is a very powerfull tool, it does a lot of complex operations. however, over the period the performance has dropped of our website.
+    I am suspect it will be dropping even further, when newer enhancement will be released.
+    so I foresee this problem, i believe this issue should be worked upon before it becomes necessary.
+    so i had proposed, this as major project in FY-20, so sepearting our website, being serverd from ASP.net world, and use webpack instead to decouple it from our server side.
+    This will definitly speed up the performance of our website, since the files would be loaded upon request.
+    This is first step in redesign our front-end
+    However, this idea was pushed back, and got a less priorities as compared to other high visible project.
+    having said that, I made efforts to include this idea in list of probable projects by showcasing the benifits. and also proposed the to make collective efforts whenever
+    we get time, specially in speed sprint and fixatholons
+
+A2. sure, database isolation problem, test manager submits test on prod db, but newer policy wont allow engineer to do that
+    which is true, but test manager is a special case
+
+7. experience a compromise?
+A1. In one of the projects I encounterd a deployment problem, I had finished my project and it was time to release, i had setup a release date
+    and had prepared, all the training material for the PD's and internal clients. However, a week before release, I got an update from
+    the windows team, that they are migrating there boxes and they want to port all apps to newer box, and that entails changing the
+    configuration in VIPS. However they couldnt proceed with migration until all the apps are migrated, as they had to retire the older
+    boxes. and so i agreed, but it took them too long to indentify the team
+
+A2. so i was working on backend for 
+A2. Sure, I can share an experience with you, one of the project i worked upon involved redesign of crucial componenet
+    Now, giving you a details, that our system runs on two diffent platforms, VMS and Fonix, we are continously driving an efforts
+    of retiring VMS, as it is legacy.
+    so this current implementation was written on VMS, and inorder my task was to port this Fonix and eventual depricate it on VMS
+    The backend developent has a process, that which ever feature, that an engineer develop, it has be developed for both platform,
+    this causes, lot of duplication logic, as the tech stack is different on two platforms on VMS we use com scripts and on Fonix we 
+    use python or perl.
+    So inorder to avoid the duplication, I proposed to write this as service instead of being a part of monolith code base.
+    However, my team had a different opinion on this, my mananger was to an opinion that since, VMS will be retired soon or later,
+    writing it as a service, is a bit of over engineering that problem and once the VMS is retired we can just depricate those files
+
+
+8. prioritize improtant items?
+A1. If i am working on multiple projects at same time, i try to rank them by priorities and then make a decision based on efforts and timeline estimates.
+    There are cases, where i had a low and high priority project, but the effort estimate for low project was very less and so i finshed
+    that first, got that checked out from my to-do list.
+    When i am working on high proiority project, and other projects gets dropped in those cases, i focus on the main project
+    and try to find out time if i can to work on other project. If i cannot commit my time to those, i request my manager about extended
+    timeline or ask other teammates to look into it.
+    There have been a situation where I was working on a high priority project and new feature request came in for my previouse project
+    The current task was i working on backend for refactoring the logic for applying prevliges, and this was critical peice for the 
+    whole enhancement, as completing this will help me drive other enhancements on frontend and on database, and at that time another
+    issue occoured in one of my other application that i had worked on previous quartar, where the web app went into infinite loading, and clients
+    could not access the web app
+    So in that case, i tried to look into the problem, and it took me more time that i could afford to spend, so i conveyed this
+    to my previous manager under whome i worked on that project and asked for help, that could you please look into this
+    and provided my debugging research. Few days later when i got a chance, i tried to catchup on update and see if it still needs my help
+    and it turned out that the VIP manager, had some migrations, and few apps were unresponsive on that
+
+9. Project Delays?
+A1. I have been into a situation where, my project got delayed, due to some reasons.
+    I was working on project called quincy, me and my team were building a tool for emergiency mitigation, and our idea was to makd
+
+10. Working with difficult persons?
+A. i had an incident where i was wokring with a team mate on an intern project, I was co-managing the project with him and was helping
+    out the intern to desing and build a web application for a project called Auto matated load testing
+    me and my teammate had desinged a project plan for the intern, and came up witha timeline, where my teammate will mentor the intern
+    for developing the backend and then i will takeover for the frontend
+    so when the intern was working with me, he encounterd a CORS probelm, he consulted me and I guided him on how to solve it and explained
+    in detail how to do it. I also shared my code snippets for the same. Now, inorder to solve the CORS problem, we needed some
+    changes in the service, that passess appropriate access-allow and origin headers. So as per my guidence, the intern consulted
+    backend engineer to learn about how to pass allow origin in python flaks service. however the teammate was relcutant on that idea, 
+    his reason was that, this was not part of the project plan or requirements and this will be needing more efforts and time
+
+11. Tailor you work as per other?
+A. Sure I was working another engineer, i learnt how to be organized, managing expectations by providing updates timeliy
+    i.e not to wait till last moment to give the update for delays,  etc
+
+12. what have you learned recently?
+A. microsoft graph api
+
+13. Unexpected incidents?
+A. I am on call for most on every alternate week, and in one such week, our system started failing
+    and it was my responsibilty to manage the situation and fix it.
+    I was working on my project, developing a UI change, and i got paged, my first reaction was to acknowledge the page and look through the logs to find out wheter its a
+    false positive or not.
+    once i gauge the impact of the problem, I stopped working on my current project, commited all my changes, and pushed those commits.
+    And focued on investigating on the issue, initially it was overwhelming, as there were lot of pages, and it was complex to find the pattern, the reason was that
+    at that instance I saw 2 different types of pages. so i kept on looking for the futher and found a pattern, i looked at the error message and based on my experience i contacted
+    dev ops team to get any answers, did not get any, contacted the db team, they checked in logs
+
+13. experience of influencing others?
+A. 
+
+14. Time when you had to use prsestation skills to convey the point?
+A. Percentage change
+
+16. Tell me about a time when you had to go above and beyond the call of duty in order to get a job done?
+A. PANTS3, went on auth issue, which was delaying the project, and they had to fix it so that we can do our job well
+
+17. failures experience?
+A. Intern project, i think that was failure.
+
+pradeep ka chu giri
+perlodbc driver for VMS
+git hub migration
+stressful PBM
+context switching
+prsestation  skills
+
+
+1. Describe a situation in which you were able to use persuasion to successfully convince someone
+    to see things your way.
+A: Task: 1 Template logging example of visual scalability
+    solution: mockups 
+
+2. Describe a time when you were faced with a stressful situation that demonstrated your coping
+    skills.
+A: Situation - server maintainance
+    Task - on-call duty, jobs started failing, 3 event happend a time and it was difficult
+    to identity the cause and track it down to source
+    Action - stayed calm, soon i was identited a pattern, took that as lead and investigated.
+
+3. 
+
+1. Template logging:
+challenges - merging distinegratd apps into 1 suite of applications
+           - visual scalability
+           - research with statistics
+           - present the idea and implement it
+           - lesson learnt, desingin a workflow, communications
+
+2. PDB:
+challenges - rewrite, took this project by myself, to learn databases
+
+3. PBM:
+challenges - 
+S: Prebuild management problem, VMS retirement, and a new problem was discoverd in our infrastracutre, that needed
+T: create an interface that is easy to use for PDs, to complete it within a month
+A: meeting, no half meausres, and no back and forth, clarity
+
+4. Give me an example of a time when you set a goal and were able to meet or achieve it. 
+A: Protractor end to end tests
+
+5.Give me a specific example of a time when you had to conform to a policy with which you did
+not agree.
+A: improvising the database deployment
+
+6.Tell me about a time when you had to go above and beyond the call of duty in order to get a job
+done.
+A: Pants3 migration, they were trying different solutions
+
+7. Give me an example of when you showed initiative and took the lead. 
+talk about two thigs, end to end testing and github migrations
+
+longX,longY
+latX, latY
+
+0-longX/2, 0-latX/2
+longX/2-longX, latX/2-latX

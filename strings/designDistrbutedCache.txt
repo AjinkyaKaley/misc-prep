@@ -1,0 +1,80 @@
+database sharding is on splitting up database on different db servers
+db replication and consensue
+attaing replication by using 2 phase commit protocol/gossip etc
+split-brain problem, for master-slave db replication
+consistent hashing: only k/n keys needs to be rehashed
+design distributed caching system
+functional req:
+    - get(key)
+    - put(key,value)
+non-functional:
+    - available
+    - low-latency/high-performant
+    - scalable
+how do you implement cache?
+    - two DS.
+        1. Map
+        2. Doubly LinkedList
+    - since we are targeting high-performant, use constant time ds
+    - until we exhaust all the map size, so we also need to think about the algo
+    - ans LRU cache
+distributed cache:
+    - it means we should have our LRU implementation split accross multiple servers
+    - we have two types
+        - designated cache : cache has its own cluster seprate from app server/service
+        - co-located cache : cache is running on same hardware as server, tightly coupled
+
+how to decied which cache server to use?
+                    service
+
+        cache   cache   cache   cache
+        host1   host2   host3   host4
+
+    - we could use consistent hashing here to chose which host to store and query data
+    - maintain a cache client on the calling server, that has list of available cache hosts
+    - client talks to host by udp/tcp
+    - after finding the host from consistent hashing, we can get the hostnode info by doing binary search on sorted list of hosts or treemap
+
+how to update the cache client with the caching list of cache hosts?
+    - naive solution, each server will have a copy of config file, drawbacks, difficult to maintain
+    - better, stored the config file on shared location, drawbacks, single point failuer on shared location
+    - best, use config service like zookeeper, it also provides functionality of checking the health of the caches hosts
+        before every request, get the info from zookeeper
+
+non-functional part!
+possible issues are,
+1. hot shard problem
+2. how to implement high available
+3. how to implement high scalebale
+
+how to make cache available?
+    - to maintain availablity we basically need to replicate data on different standby machines
+    - we can chose two different category of protocols
+    1. probibilistic
+        - gossip, epidemic
+        - these kinda protocol tend to give eventual consistency
+    2. distributed consensue
+        - 2/3 phase commits, paxos, quorom
+        - these favor strong consistency
+        - simplest is the master-slave
+        - with master slave always keep the one as master and other as slave
+        - else if we are using both as master, then split-brain probelm will occours
+        - with simple master-slave distribute the read traffic between slave and write to masters
+        - have a mechanisim to update the slave for every write commit on master
+        - for failover on these master-slave nodes, we can another component, that help us in electing the master incase it fails
+
+cool done!
+what else is important in interivew?
+1. consistency, we are comprimising it as per CAP therom, as if we dont achive consistency there will cache miss, NBD
+2. data expiration, LRU cache is removes the data only when the cache is full, but there would be case where data is still for a while
+    without cache getting full
+3. we can implement local cache withing cache client
+4. security, not meant to be
+5. we can make cache client as proxy
+6. monitoring and logging
+7. flaws of consistent hashing
+    - domino effect: if one server overloads, it traffic get to another, and even that fails ....
+    - uneven load on servers in ring, if they are not evenly placed in the ring
+    
+how to tackel when a host is added/removed?
+    - we should have a client

@@ -9,7 +9,7 @@ class Solution:
         # -4,-1,1,2
         nums.sort()
         i = 0
-        tempSum = sum(nums[:3])
+        tempSum = sum(nums[:3]) # sum cant be worst, as we have sorted the array in descending order
         while i < len(nums) -2:
             j = i + 1 
             k = len(nums) -1

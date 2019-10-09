@@ -16,6 +16,23 @@ class Solution:
 # for float x and negative y
 
 
+    def myPow2(self, x: float, n: int) -> float:
+
+        def helper(x, n):
+            if n == 0:
+                return 1.0
+
+            s = helper(x, n//2)
+            if n % 2 == 0:
+                return s*s
+            else:
+                return s * s * x
+
+        if n < 0:
+            n = -n
+            x = 1/x
+        return helper(x, n)
+
     def power(self,x, y):
 
         if(y == 0):
@@ -38,5 +55,6 @@ class Solution:
 
 
 sln = Solution()
-print(sln.myPow(2, -3))
+print(sln.myPow2(2.00000,
+                10))
 

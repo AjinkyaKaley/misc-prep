@@ -25,7 +25,7 @@ class Solution:
             else:
                 heapq.heappush(pq, (value2, arrId2))
 
-#    2   4   6
+#      2   4   6
 #   +------------
 # 1 |  3   5   7
 # 7 |  9  11  13
@@ -47,5 +47,6 @@ class Solution:
                 push(i + 1, 0)
         return pairs
 sln = Solution()
-print(sln.kSmallestPairsFaster([1, 7, 11], [2, 4, 6], 5))
+print(sln.kSmallestPairsFaster([1, 8, 9], [2, 11, 20], 5))
+
 # sln.kSmallestPairsFaster([1, 1, 2], [1, 2, 3], 2)

@@ -14,4 +14,4 @@ class Solution(object):
             return solution
         return DFS(nestedList, 1, [])
 sln = Solution()
-print(sln.depthSum([[[[5]]]]))
+print(sln.depthSum([[1, 1], 2, [1, 1]]))

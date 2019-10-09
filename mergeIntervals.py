@@ -1,3 +1,14 @@
+
+class Interval:
+
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
+
+    def __lt__(self, other):
+        return self.start < other.start
+
+
 class Solution:
     idx=1
     def getItem(self, item):
@@ -31,6 +42,23 @@ class Solution:
         
         return sortedIntervals
 
+    def merge_(self, intervals):
+        _intervals = [Interval(start, end) for start, end in intervals]
+        sortedIntervals = sorted(_intervals)
+        solution = [sortedIntervals[0]]
+        n = len(sortedIntervals)
+        for i in range(1, n):
+            if solution[-1].end >= sortedIntervals[i].start:
+                solution[-1].start = min(solution[-1].start,
+                                         sortedIntervals[i].start)
+                solution[-1].end = max(solution[-1].end,
+                                       sortedIntervals[i].end)
+            else:
+                solution.append(sortedIntervals[i])
+
+        return [[inter.start, inter.end] for inter in solution]
+
+
     def printTest(self, res):
         for i in range(0, self.idx):
             print(res[i])
@@ -55,9 +83,11 @@ class Solution:
         print(lookup)
 
 
+
+
 sln = Solution()
-sln.test_case = [[0, 30], [5, 10], [15, 20]]
-t = sln.mergeIntervalsWithStack(sln.test_case)
+sln.test_case = [[1, 3], [2, 6], [8, 10], [15, 18]]
+t = sln.merge_(sln.test_case)
 sln.printTest(t)
 
 # [15,18],[8,10],[4,7],[2,1],[1,5]
